@@ -22,6 +22,7 @@ services:
   selenium:
     image: selenium/standalone-chromium
     restart: unless-stopped
+    shm_size: '2g'
 
   redis:
     image: valkey/valkey:8

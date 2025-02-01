@@ -1354,6 +1354,7 @@ class AppGeneratorTest < Rails::Generators::TestCase
       expected_selenium_config = {
         "image" => "selenium/standalone-chromium",
         "restart" => "unless-stopped",
+        "shm_size" => '2g'
       }
 
       assert_equal expected_selenium_config, compose_config["services"]["selenium"]
